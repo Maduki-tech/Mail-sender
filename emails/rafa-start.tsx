@@ -20,6 +20,9 @@ interface YelpRecentLoginEmailProps {
   location?: string;
 }
 
+const imageUrl =
+  "https://github.com/Maduki-tech/Mail-sender/blob/main/emails/static/image.jpeg?raw=true";
+
 export const YelpRecentLoginEmail = ({
   name,
   startDate,
@@ -98,7 +101,11 @@ export const YelpRecentLoginEmail = ({
               </Column>
             </Row>
             <Row style={{ padding: "20px" }}>
-              <Img style={image} width={620} src={`/static/image.jpeg`} />
+              <Column style={{ ...buttonContainer, width: "100%" }}>
+                <Button style={button} href={imageUrl} target="_blank">
+                  Zeit für eine Jagd!
+                </Button>
+              </Column>
             </Row>
           </Section>
         </Container>
@@ -125,8 +132,19 @@ const paragraph = {
   fontSize: 16,
 };
 
+const button = {
+  backgroundColor: "#ff0088",
+  color: "#fff",
+  fontSize: 16,
+  padding: "10px 20px",
+  textDecoration: "none",
+  borderRadius: "3px",
+};
+
 const buttonContainer = {
   display: "flex",
+  justifyContent: "center",
+  width: "100%",
 };
 
 const content = {
